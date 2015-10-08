@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html>
+<head>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+
+<script src="bootslider.js"></script>
+
+
+<style>
+
+.slider-gallery {
+	overflow:hidden;
+	white-space:nowrap;
+	background:rgba(0,0,0,.2);	
+}
+
+.slider-gallery > * {
+	display:inline-block;	
+	margin-right: -4px;
+	float:none;
+}
+
+.down {
+
+background:red;
+}
+
+
+</style>
+
+<script>
+$(function() {
+	
+	//$( ".slider-gallery" ).bootslider();
+	
+	$( "#gal1" ).bootslider();
+	$( "#gal2" ).bootslider({snapToItem:  false}); 	
+	$( "#gal3" ).bootslider({next:  '#next', previous: '#previous'}); 
+
+});
+
+</script>
+
+
+
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+	<h3>sdfsdf </h3>
+	
+	<div class="row slider-gallery" id="gal1">
+		<div class="col col-sm-4 col-xs-6">
+			1<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-1.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			2<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-2.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			3<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-3.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			4<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-4.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			5<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-5.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			6<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-6.jpg"/>
+		</div>
+	</div>
+
+	<h3>sdfsdf </h3>
+	
+	<div class="row slider-gallery" id="gal2">
+		
+		<div class="col col-sm-4 col-xs-6">
+			1<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-1.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			2<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-2.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			3<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-3.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			4<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-4.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			5<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-5.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			6<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-6.jpg"/>
+		</div>
+		
+	
+	</div>
+
+	<h3>sdfsdf </h3>
+	<p>
+    	
+   		<a href="#" id="previous">previous</a> | <a href="#" id="next">next</a>
+    </p>
+	<div class="row slider-gallery" id="gal3">
+		
+		<div class="col col-sm-4 col-xs-6">
+			1<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-1.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			2<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-2.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			3<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-3.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			4<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-4.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			5<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-5.jpg"/>
+		</div>
+		<div class="col col-sm-4 col-xs-6">
+			6<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-6.jpg"/>
+		</div>
+		
+	
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
