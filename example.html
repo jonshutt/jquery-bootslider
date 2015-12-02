@@ -1,148 +1,133 @@
-
 <!doctype html>
 <html>
 <head>
-
-
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-
-
 <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-
-
 <script src="bootslider.js"></script>
-
-
-<style>
-
-.slider-gallery {
-	overflow:hidden;
-	white-space:nowrap;
-	background:rgba(0,0,0,.2);	
-}
-
-.slider-gallery > * {
-	display:inline-block;	
-	margin-right: -4px;
-	float:none;
-}
-
-.down {
-
-background:red;
-}
-
-
-</style>
-
+<link rel="stylesheet" type="text/css" href="bootslider.css">
 <script>
 $(function() {
 	
 	//$( ".slider-gallery" ).bootslider();
 	
 	$( "#gal1" ).bootslider();
-	$( "#gal2" ).bootslider({snapToItem:  false}); 	
-	$( "#gal3" ).bootslider({next:  '#next', previous: '#previous'}); 
+	$( "#gal2" ).bootslider(); 	
+	$( "#gal3" ).bootslider({snapToItem:  false}); 	
+	
+	$( "#gal4" ).bootslider({buttons:true}); 
+	
+	
+	$( "#gal5" ).bootslider({next:  '#next', previous: '#previous'}); 
+	
+	$( "#gal6" ).bootslider({
+		complete:function(e) {			
+			$('#response').html(e.firstChild.data('details') + ' is the first item in view');			
+		}	
+	}); 
 
 });
 
 </script>
-
-
-
 <meta charset="utf-8">
 <title>Untitled Document</title>
 </head>
 
 <body>
-
-
-
 <div class="container">
 
-	<h3>sdfsdf </h3>
-	
-	<div class="row slider-gallery" id="gal1">
-		<div class="col col-sm-4 col-xs-6">
-			1<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-1.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			2<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-2.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			3<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-3.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			4<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-4.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			5<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-5.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			6<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-6.jpg"/>
+
+
+	<h3>Gallery 1</h3>
+	<p>This gallery shows just one item at at time. The number of items in view are purely controled by standard bootsrap column classes</p>
+	<pre>$( "#gal1" ).bootslider();</pre>
+	<div class="row">		
+		<div class="col-xs-12">
+			<div class="row slider-gallery" id="gal1">
+				<div class="col col-xs-12"> <img style="width:100%" class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-200-1.jpg"/> </div>
+				<div class="col col-xs-12"> <img style="width:100%" class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-200-2.jpg"/> </div>
+				<div class="col col-xs-12"> <img style="width:100%" class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-200-3.jpg"/> </div>
+				<div class="col col-xs-12"> <img style="width:100%" class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-200-4.jpg"/> </div>
+			</div>
 		</div>
 	</div>
-
-	<h3>sdfsdf </h3>
 	
+	
+	
+	<h3>Gallery 2</h3>
+	<p>This is a standard click and drag gallery, sliding to the nearest item when released</p>
+	<pre>$( "#gal1" ).bootslider();</pre>
 	<div class="row slider-gallery" id="gal2">
-		
-		<div class="col col-sm-4 col-xs-6">
-			1<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-1.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			2<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-2.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			3<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-3.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			4<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-4.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			5<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-5.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			6<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-6.jpg"/>
-		</div>
-		
-	
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-1.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-2.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-3.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-4.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-5.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-6.jpg"/> </div>
 	</div>
-
-	<h3>sdfsdf </h3>
-	<p>
-    	
-   		<a href="#" id="previous">previous</a> | <a href="#" id="next">next</a>
-    </p>
+	<h3>Gallery 3 </h3>
+	<p>This is a standard click and drag gallery, and stops where you leave it</p>
+	<pre>$( "#gal3" ).bootslider({snapToItem:  true}); 	</pre>
 	<div class="row slider-gallery" id="gal3">
-		
-		<div class="col col-sm-4 col-xs-6">
-			1<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-1.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			2<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-2.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			3<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-3.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			4<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-4.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			5<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-5.jpg"/>
-		</div>
-		<div class="col col-sm-4 col-xs-6">
-			6<img class="img-responsive thumbnail"  src="http://lorempixel.com/output/animals-q-c-400-300-6.jpg"/>
-		</div>
-		
-	
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-1.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-2.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-3.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-4.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-5.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-6.jpg"/> </div>
 	</div>
+	
+	
+	<h3>Gallery 4</h3>
+	<p>This gallery adds next and previous buttons</p>
+	<pre>$( "#gal4" ).bootslider({buttons:true}); </pre>
+	<div class="row slider-gallery" id="gal4">
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-1.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-2.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-3.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-4.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-5.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-6.jpg"/> </div>
+	</div>
+	
+	
+	<h3>Gallery 5</h3>
+	<p>This gallery links items on the page to create custom next and previous button.</p>
+	<pre>$( "#gal5" ).bootslider({next:  '#next', previous: '#previous'}); </pre>
+	
+	<div class="row slider-gallery" id="gal5">
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-1.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-2.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-3.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-4.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-5.jpg"/> </div>
+		<div class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-6.jpg"/> </div>
+	</div>
+	<p> <a href="#" id="previous" class="btn btn-info">previous</a> <a href="#" id="next" class="btn btn-info">next</a> </p>
+	
+	
+	<h3>Gallery 6</h3>
+	<p>This gallery adds a callback, so events can be trigged after gallery has slide to a new position. In this case it reads a data attribute on the slide</p>
+	<pre>
+$( "#gal6" ).bootslider({
+	complete:function(e) {			
+		$('#response').html(e.firstChild.data('details') + ' is the first item in view');				
+	}	
+}); 
+	</pre>
+	
+	<div class="row slider-gallery" id="gal6">
+		<div data-details="image 1" class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-1.jpg"/> </div>
+		<div data-details="image 2" class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-2.jpg"/> </div>
+		<div data-details="image 3" class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-3.jpg"/> </div>
+		<div data-details="image 4" class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-4.jpg"/> </div>
+		<div data-details="image 5" class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-5.jpg"/> </div>
+		<div data-details="image 6" class="col col-sm-4 col-xs-6"> <img class="img-responsive thumbnail"  src="http://lorempixel.com/image_output/nature-q-c-400-300-6.jpg"/> </div>
+	</div>
+	<div class="alert  alert-info" id="response">
+	</div>
+	
+	
 </div>
-
-
-
-
 </body>
 </html>

@@ -1,0 +1,49 @@
+.bootslider-wrapper {
+	
+	position:relative;
+}
+
+
+.bootslider-wrapper .next {
+	position:absolute;
+	right:-25px;
+	top:50%;
+	z-index:500;
+	
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 0 20px 20px;
+	border-color: transparent transparent transparent rgba(0,0,0,.5);
+	cursor:pointer;
+	text-indent:-9999px;
+	
+	transform:translateY(-50%);
+}
+
+.bootslider-wrapper .previous {
+	position:absolute;
+	left:-25px;
+	top:50%;
+	z-index:500;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 20px 20px 0;
+	border-color: transparent rgba(0,0,0,.5) transparent transparent;
+	text-indent:-9999px;
+	
+	cursor:pointer;
+	transform:translateY(-50%);
+}
+
+.bootslider {
+	overflow:hidden;
+	white-space:nowrap;	
+}
+
+.bootslider  .bootsliderItem {
+	display:inline-block;	
+	margin-right: -4px;
+	float:none;
+}
